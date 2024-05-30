@@ -3,13 +3,8 @@
   let dashboardToast = new bootstrap.Toast(document.querySelector(".toast"));
   let message = document.querySelector(".toastContent");
 
-  // Get the button element
   const dropdownButton = document.querySelector(".dropdown-toggle");
-
-  // Get the dropdown menu element
   const dropdownMenu = document.querySelector(".dropdown-menu");
-
-  // Toggle the dropdown when the button is clicked
   dropdownButton.addEventListener("click", function () {
     dropdownMenu.classList.toggle("show");
   });
@@ -44,56 +39,6 @@
       console.log(error);
     }
   });
-  // let dashboardData = [
-  //   {
-  //     id: "1",
-  //     name: "Entertainment",
-  //     total: 1000,
-  //     spent: 500,
-  //     percentage: 50,
-  //     spentDetails: [
-  //       { amount: 200, spentOn: "Movie" },
-  //       { amount: 200, spentOn: "Netflix" },
-  //       { amount: 100, spentOn: "HotStar" },
-  //     ],
-  //   },
-  //   {
-  //     id: "2",
-  //     name: "Myself",
-  //     total: 1000,
-  //     spent: 600,
-  //     percentage: 60,
-  //     spentDetails: [
-  //       { amount: 200, spentOn: "Movie" },
-  //       { amount: 200, spentOn: "Netflix" },
-  //       { amount: 100, spentOn: "HotStar" },
-  //     ],
-  //   },
-  //   {
-  //     id: "3",
-  //     name: "Food",
-  //     total: 1000,
-  //     spent: 400,
-  //     percentage: 40,
-  //     spentDetails: [
-  //       { amount: 200, spentOn: "Movie" },
-  //       { amount: 200, spentOn: "Netflix" },
-  //       { amount: 100, spentOn: "HotStar" },
-  //     ],
-  //   },
-  //   {
-  //     id: "4",
-  //     name: "Cloths",
-  //     total: 5000,
-  //     spent: 3000,
-  //     percentage: 60,
-  //     spentDetails: [
-  //       { amount: 1000, spentOn: "T-Shirts" },
-  //       { amount: 1000, spentOn: "Sweat Shirt" },
-  //       { amount: 1000, spentOn: "Shirt" },
-  //     ],
-  //   },
-  // ];
   async function getBudgetsData() {
     try {
       let users = await fetch(`http://localhost:5000/budgets`, {
@@ -118,7 +63,6 @@
   }
 
   let cardContainer = document.querySelector("#card-container");
-
   async function renderCards() {
     cardContainer.innerHTML = "";
     if (dashboardData.length == 0) {
@@ -456,10 +400,9 @@
     }
   });
 
-  let addCategory = document.querySelector("#addCategoryBtn");
+  const addCategory = document.querySelector("#addCategoryBtn");
   addCategory.addEventListener("click", async (e) => {
     e.preventDefault();
-
     let name = document.querySelector("#Category").value;
     let total = document.querySelector("#Total").value;
     let spent = 0;
