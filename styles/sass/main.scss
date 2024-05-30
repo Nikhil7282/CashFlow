@@ -1,0 +1,29 @@
+$primary:black;
+
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/navbar';
+@import '../../node_modules/bootstrap/scss/progress';
+
+.navbar{
+    height: 65px;
+}
+
+.progress{
+background-color: red;
+}
+
+
+$custom-theme-colors: (
+    "altPrimary":black,
+    "altSecondary":white,
+    "altDanger":red,
+    "altInfo":#222,
+    "altgrey":#3e3e3e,
+    "altSuccess":#292929
+);
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';

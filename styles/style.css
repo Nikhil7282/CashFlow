@@ -1,0 +1,169 @@
+* {
+  font-family: "Ubuntu" !important;
+  box-sizing: border-box !important;
+}
+body {
+  background-color: black !important;
+}
+
+.prx-120 {
+  padding-right: 120px !important;
+}
+
+.plx-50 {
+  padding-left: 50px !important;
+}
+
+.nav-menu {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.navIcon {
+  color: white !important;
+}
+
+.nav-h {
+  height: 90px !important;
+}
+.home-container {
+  position: absolute !important;
+  z-index: -1 !important;
+}
+
+.home-h {
+  height: calc(100vh - 90px) !important;
+}
+
+.dashboard-h {
+  height: calc(100vh - 65px);
+  min-height: max-content !important;
+  max-height: fit-content !important;
+}
+
+.home-btn {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+.home-btn-top {
+  position: relative;
+  width: fit-content;
+  padding: 8px;
+  background-color: rgb(255, 30, 30);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  outline: 1.5px solid #222;
+  z-index: 2;
+  transition: 0.2s;
+  color: white;
+}
+.home-btn-bottom {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(174, 0, 0);
+  top: 10px;
+  left: 0;
+  border-radius: 15px;
+  outline: 3px solid darkgray;
+  z-index: 1;
+}
+
+.cardItem {
+  cursor: pointer;
+}
+
+.home-btn:active .home-btn-top {
+  transform: translateY(10px);
+}
+
+.dashboard-height {
+  height: 100px !important;
+}
+
+.custom-navbar {
+  background-color: black !important;
+  margin-top: 5px !important;
+}
+.min-height-90 {
+  min-height: calc(100vh - 65px) !important;
+}
+.max-height-fit {
+  max-height: max-content !important;
+}
+
+.addExpense-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.addExpense-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+.addExpense-close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+.addExpense-close-button:hover {
+  background-color: darkgray;
+}
+.show-addExpense-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-menu {
+  background-color: #222;
+}
+.dropdown-item {
+  transition: ease all 0.3s;
+}
+.dropdown-item:hover {
+  background-color: black;
+  color: red !important;
+}
+.profile-modal-image {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
